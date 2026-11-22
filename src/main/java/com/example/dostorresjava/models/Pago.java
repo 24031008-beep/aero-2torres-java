@@ -1,42 +1,34 @@
 package com.example.dostorresjava.models;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
+import com.example.dostorresjava.enums.EstadoPago;
+import com.example.dostorresjava.enums.MetodoPago;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import java.util.Date;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Pago {
 
-    private String idPago;
-    private String idReservacion;
-    private String idUsuario;
+    private String id;
 
-    private String metodo;
-    private String ultimosDigitos;
+    private String reservacionId;
+    private String clienteId;
 
     private double monto;
-    private String moneda;
-    private String estado;
 
-    private Date fechaPago;
+    private MetodoPago metodo;
 
-    public Map<String, Object> toMap() {
+    private EstadoPago estado;
 
-        Map<String, Object> map = new HashMap<>();
+    private Date fecha;
 
-        map.put("id_pago", idPago);
-        map.put("id_reservacion", idReservacion);
-        map.put("id_usuario", idUsuario);
+    private String referencia;
 
-        map.put("metodo", metodo);
-        map.put("ultimos_digitos", ultimosDigitos);
+    private String descripcion;
 
-        map.put("monto", monto);
-        map.put("moneda", moneda);
-        map.put("estado", estado);
-
-        map.put("fecha_pago", fechaPago);
-
-        return map;
-    }
+    private double montoReembolsado;
 }
-

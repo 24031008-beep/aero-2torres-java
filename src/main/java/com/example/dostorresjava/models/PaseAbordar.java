@@ -1,34 +1,35 @@
 package com.example.dostorresjava.models;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class PaseAbordar {
 
-    private String idPase;
-    private String idReservacion;
+    private String id;
 
-    private String grupoAbordaje;
-    private String codigoQr;
-    private String estadoCheckin;
+    private String codigoAbordaje;
+
+    private String clienteId;
+    private String vueloId;
+    private String reservacionId;
+
+    private String asiento;
+
+    private String puerta;
+
+    private Date horaAbordaje;
 
     private Date fechaEmision;
 
-    public Map<String, Object> toMap() {
+    private String codigoQR;
 
-        Map<String, Object> map = new HashMap<>();
+    private String urlDocumento;
 
-        map.put("id_pase", idPase);
-        map.put("id_reservacion", idReservacion);
-
-        map.put("grupo_abordaje", grupoAbordaje);
-        map.put("codigo_qr", codigoQr);
-        map.put("estado_checkin", estadoCheckin);
-
-        map.put("fecha_emision", fechaEmision);
-
-        return map;
-    }
+    //private EstadoPase estado;
 }
 
