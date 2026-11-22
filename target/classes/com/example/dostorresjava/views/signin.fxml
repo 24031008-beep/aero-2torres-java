@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.dostorresjava.controllers.SignInController">
+
+    <top >
+        <VBox alignment="BASELINE_CENTER">
+            <Label text="Ingrese los parámetros solicitados" style="-fx-font-size: 20.0; -fx-font-weight: bold;"/>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="10.0" top="20.0"/>
+            </padding>
+
+            <Label text="Nombre(s)"/>
+            <TextField fx:id="txtNombre" VBox.vgrow="ALWAYS" promptText="Tu Nombre(s)"/>
+            <Label text="Apellidos"/>
+            <TextField fx:id="txtApellido" VBox.vgrow="ALWAYS" promptText="Tus Apellidos"/>
+            <Label text="Inserte su correo de usuario"/>
+            <TextField fx:id="txtCorreo" VBox.vgrow="ALWAYS" promptText="Tu correo"/>
+            <Label text="Telefono"/>
+            <TextField fx:id="txtTelefono" VBox.vgrow="ALWAYS" promptText="Tu telefono"/>
+            <Label text="Pasaporte"/>
+            <TextField fx:id="txtPasaporte" VBox.vgrow="ALWAYS" promptText="Tu pasaporte"/>
+            <Label text="Fecha de Nacimiento"/>
+            <TextField fx:id="txtFechaNac" VBox.vgrow="ALWAYS" promptText="Tu fechaNac"/><!-->editar<-->
+            <Label text="Nacionalidad"/>
+            <TextField fx:id="txtNacionalidad" VBox.vgrow="ALWAYS" promptText="Tu Nacionalidad"/>
+            <Label text="Dirección"/>
+            <TextField fx:id="txtAdress" VBox.vgrow="ALWAYS" promptText="Tu direccion"/>
+            <Label text="Inserte su contraseña"/>
+            <PasswordField fx:id="txtPassword" VBox.vgrow="ALWAYS" promptText="Tu contraseña"/>
+            <Label text="Confirme su contraseña"/>
+            <PasswordField fx:id="confirmPassword" VBox.vgrow="ALWAYS" promptText="Tu contraseña"/>
+
+            <HBox spacing="10.0" alignment="BASELINE_CENTER">
+                <Button text="Registrate" onAction="#onAddButtonClick"
+                        style="-fx-background-color: #333333; -fx-text-fill: white; -fx-font-family: 'Microsoft JhengHei'"
+                fx:id="btnSend"/>
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>
